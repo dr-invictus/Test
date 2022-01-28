@@ -39,7 +39,7 @@ console.log(i.endsWith('js', 1)); // false
 const j = 'Hello js'
 console.log (j.search('js')); // 6
 // slice - Извлекает часть строки и возвращает новую строку. Обязательный параметр — начало извлечения. Вторым параметром можно установить границу (по умолчанию — до конца строки).
-const k = 'Hello java script'
+const k = 'Hello js'
 console.log(k.slice(10)); //  script
 console.log(k.slice(0, 10)); // Hello java
 // Отрицательные значения тоже работают
@@ -75,6 +75,19 @@ console.log(s.charCodeAt()); // 72
 const t = ' js'
 console.log(t, String.fromCharCode(72, 101, 108, 108, 111)); //  js Hello
 
-// https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/
-const  str = 'what can cedefi bring to the crypton industry';
-console.log(str.toUpperCase());
+// Второе задание https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/
+//Домен 
+const url = new URL('https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/')
+url.hostname//inc4.net
+// Статья
+const url = new URL('https://inc4.net/what-can-cedefi-bring-to-the-crypto-industry/')
+url.pathname ///what-can-cedefi-bring-to-the-crypto-industry/
+//Убираем дефисы
+var sen = "/what-can-cedefi-bring-to-the-crypto-industry/";
+var newSen = sen.match(/[^_\W]+/g).join(' ');
+console.log(newSen);//what can cedefi bring to the crypto industry
+//Каждая первая буква заглавная
+let string = 'what can cedefi bring to the crypto industry';
+console.log(
+string.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
+);//What Can Cedefi Bring To The Crypto Industry
